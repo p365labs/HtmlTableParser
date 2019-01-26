@@ -1,0 +1,25 @@
+version: '3.3'
+
+services:
+    php:
+        build:
+            context: .
+            dockerfile: ./Docker/php/Dockerfile
+        environment:
+            TIMEZONE: UTC
+            COMPOSER_VENDOR_DIR: /var/www/html/vendor
+        working_dir: /var/www/html
+        volumes:
+            - .:/var/www/html:delegated
+            - ./docker/php/php-linux.ini:/usr/local/etc/php/conf.d/php-linux.ini:ro
+        networks:
+            doctrine_training:
+                ipv4_address: 173.30.12.10
+
+networks:
+    doctrine_training:
+        driver: bridge
+        ipam:
+            driver: default
+            config:
+            - subnet: 173.30.12.0/24

@@ -1,0 +1,19 @@
+sudo: required
+dist: xenial
+
+group: edge
+
+branches:
+  only:
+    - master
+
+language: php
+php:
+  - '7.1'
+  - '7.2'
+  - '7.3'
+  - nightly
+
+script:
+  - pwd
+  - script: phpunit --coverage-text
