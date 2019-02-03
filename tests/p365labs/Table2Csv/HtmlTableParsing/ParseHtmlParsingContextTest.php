@@ -16,7 +16,7 @@ class ParseHtmlParsingContextTest extends TestCase
         $this->assertInstanceOf(ParseHtmlSingleTableStratetgy::class, $context->getStrategy());
     }
 
-    public function testMultipleStrategy(): void
+    public function testMultipleStrategyInstance(): void
     {
         $context = new ParseHtmlParsingContext(ParseHtmlParsingContext::MULTIPLE_TABLE_STRATEGY);
         $this->assertInstanceOf(ParseHtmlMultipleTableStratetgy::class, $context->getStrategy());

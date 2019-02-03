@@ -64,9 +64,9 @@ EOT;
 
     public function testMultipleTablesParsing()
     {
-        $this->markTestIncomplete('This test need to wait for Strategy pattern implementation');
+//        $this->markTestIncomplete('This test need to wait for Strategy pattern implementation');
         $table = <<<EOT
-<table cellspacing="1px" cellpadding="0" style="background-color:#e1e5e9">
+<table cellspacing="1px" cellpadding="0" id="test01" style="background-color:#e1e5e9">
 						
 							<tbody><tr>
 								<th style="width:20%">Parameter</th>
@@ -100,7 +100,7 @@ EOT;
 							</tr>
 							
 						</tbody></table>
-<table cellspacing="1px" cellpadding="0" style="background-color:#e1e5e9">
+<table cellspacing="1px" cellpadding="0" id="test02"  style="background-color:#e1e5e9">
 						
 							<tbody><tr>
 								<th style="width:20%">Parameter</th>

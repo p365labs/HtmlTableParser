@@ -9,5 +9,5 @@ interface HtmlTableParsingStratetgyInterface
      *
      * @return string
      */
-    public function doTableParsing(string $html): string;
+    public function doTableParsing(string $html);
 }
